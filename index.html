@@ -20,6 +20,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
@@ -34,7 +36,7 @@
           >
           <ul class="site-nav list">
             <li>
-              <a class="item link" href="./index.html">Studio</a>
+              <a class="item link current" href="./index.html">Studio</a>
             </li>
             <li>
               <a class="item link" href="./portfolio.html">Portfolio</a>
@@ -70,7 +72,9 @@
       <section class="hero-section">
         <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="button-hero">Order Service</button>
+          <button type="button" data-modal-open class="button-hero">
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -442,5 +446,22 @@
         </div>
       </section>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" data-modal-close type="button">
+          <a href="" class="modal-link link">
+            <svg class="modal-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </a>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
